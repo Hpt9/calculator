@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    button {
+        border: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .calculator {
+        width: 330px;
+        // height: 500px;
+        background-color: black;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        padding: 18px;
+        row-gap: 18px;
+
+        .clear:hover {
+            cursor: pointer;
+        }
+
+        &>div:first-child {
+            width: 100%;
+            height: 125px;
+            display: flex;
+            align-items: end;
+            justify-content: end;
+
+            input {
+                width: 100%;
+                height: 60px;
+                background-color: transparent;
+                text-align: right;
+                font-size: 50px;
+                border: none;
+                color: white;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        &>div:last-child {
+            width: 100%;
+            height: 75%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+
+            .adv-ope {
+                background-color: #A5A5A5;
+                color: #000;
+                text-align: center;
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 510;
+                line-height: normal;
+            }
+
+            .simple-ope,
+            .equal {
+                background-color: #F1A33B;
+                color: #FFF;
+                font-size: 37px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            .num {
+                background-color: #333333;
+                color: #FFF;
+                text-align: center;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            button:not(.zero) {
+                border-radius: 100%;
+            }
+
+            .zero {
+                border-radius: 50px;
+            }
+
+            .row1,
+            .row2,
+            .row3,
+            .row4 {
+                display: flex;
+                column-gap: 15px;
+
+                &>button {
+                    width: calc(100%/4);
+                    aspect-ratio: 1/1;
+                }
+            }
+
+            .row5 {
+                display: flex;
+                column-gap: 18px;
+
+                &>button:first-child {
+                    width: 165px;
+                }
+
+                &>button:not(:first-child) {
+                    width: 25%;
+                    aspect-ratio: 1/1;
+                }
+            }
+        }
+    }
+}

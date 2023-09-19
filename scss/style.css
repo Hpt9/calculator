@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* button {
+  border: none;
+}
+* button:hover {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .calculator {
+  width: 330px;
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  row-gap: 18px;
+}
+.container .calculator .clear:hover {
+  cursor: pointer;
+}
+.container .calculator > div:first-child {
+  width: 100%;
+  height: 125px;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+.container .calculator > div:first-child input {
+  width: 100%;
+  height: 60px;
+  background-color: transparent;
+  text-align: right;
+  font-size: 50px;
+  border: none;
+  color: white;
+}
+.container .calculator > div:first-child input:focus {
+  outline: none;
+}
+.container .calculator > div:last-child {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.container .calculator > div:last-child .adv-ope {
+  background-color: #A5A5A5;
+  color: #000;
+  text-align: center;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 510;
+  line-height: normal;
+}
+.container .calculator > div:last-child .simple-ope,
+.container .calculator > div:last-child .equal {
+  background-color: #F1A33B;
+  color: #FFF;
+  font-size: 37px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.container .calculator > div:last-child .num {
+  background-color: #333333;
+  color: #FFF;
+  text-align: center;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.container .calculator > div:last-child button:not(.zero) {
+  border-radius: 100%;
+}
+.container .calculator > div:last-child .zero {
+  border-radius: 50px;
+}
+.container .calculator > div:last-child .row1,
+.container .calculator > div:last-child .row2,
+.container .calculator > div:last-child .row3,
+.container .calculator > div:last-child .row4 {
+  display: flex;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+.container .calculator > div:last-child .row1 > button,
+.container .calculator > div:last-child .row2 > button,
+.container .calculator > div:last-child .row3 > button,
+.container .calculator > div:last-child .row4 > button {
+  width: 25%;
+  aspect-ratio: 1/1;
+}
+.container .calculator > div:last-child .row5 {
+  display: flex;
+  -moz-column-gap: 18px;
+       column-gap: 18px;
+}
+.container .calculator > div:last-child .row5 > button:first-child {
+  width: 165px;
+}
+.container .calculator > div:last-child .row5 > button:not(:first-child) {
+  width: 25%;
+  aspect-ratio: 1/1;
+}/*# sourceMappingURL=style.css.map */
